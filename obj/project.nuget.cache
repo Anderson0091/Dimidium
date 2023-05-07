@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nQPGaTOzf21szRpCbPvYiH2yEBtt7W6EiScQUEYH2XYhqvmQ3aCFY+R5YT7B9Pe9Cbb156HwPgF+QqArelHT/w==",
+  "dgSpecHash": "FZsz+tew6XO+eari2YV92kPWn9ggUKWh23/dYmADd8H+KLbOBZD6DO3YERZsB3CNQ6MSM01FcSKzm6uvv4ELpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andy\\Documents\\GitHub\\Dimidium\\Dimidiun.csproj",
+  "projectFilePath": "/workspaces/Dimidium/Dimidiun.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
