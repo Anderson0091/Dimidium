@@ -2,7 +2,7 @@
 @using Dimidiun.Data
 @inject WeatherForecastService ForecastService
 
-<PageTitle>Weather forecast</PageTitle>
+
 
 <h1>Weather forecast</h1>
 
@@ -45,3 +45,35 @@ else
         forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
     }
 }
+
+<div style="display: flex; flex-direction: row;">
+    
+
+<ul>
+    @foreach (var item in menuItems)
+    {
+        <li><a href="@item.Url">@item.Text</a></li>
+    }
+</ul>
+
+@code {
+    private List<MenuItem> menuItems = new List<MenuItem>
+    {
+          new MenuItem { Url = "/", Text = "Inicio" },
+        new MenuItem { Url = "/Counter", Text = "Acerca de" },
+        new MenuItem { Url = "/Index", Text = "Contacto" },
+        new MenuItem { Url = "/FetchData", Text = "Servicios" },
+         new MenuItem { Url = "/Prueba", Text = "Pruebas" },
+    };
+
+    private class MenuItem
+    {
+        public string Url { get; set; }
+        public string Text { get; set; }
+    }
+}
+
+
+
+
+</div>

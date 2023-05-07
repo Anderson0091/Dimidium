@@ -1,10 +1,40 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Bienvenido a mi página de ejemplo</h1>
 
-Welcome to your new app.
+
+<hr>
+<div style="display: flex; flex-direction: row;">
+    
+
+<ul>
+    @foreach (var item in menuItems)
+    {
+        <li><a input="button" href="@item.Url">@item.Text</a></li>
+    }
+</ul>
+
+@code {
+    private List<MenuItem> menuItems = new List<MenuItem>
+    {
+   new MenuItem { Url = "/", Text = "Inicio" },
+        new MenuItem { Url = "/Counter", Text = "Acerca de" },
+        new MenuItem { Url = "/Index", Text = "Contacto" },
+        new MenuItem { Url = "/FetchData", Text = "Servicios" },
+         new MenuItem { Url = "/pg1", Text = "Pruebas" },
+    };
+
+    private class MenuItem
+    {
+        public string Url { get; set; }
+        public string Text { get; set; }
+    }
+}
+</div>
+
 <hr>
 
 
@@ -27,7 +57,7 @@ Welcome to your new app.
 
    
 
-<p>El resultado de la suma es: @resultado</p>
+<h1>El resultado es: @resultado</h1>
 
 
 
@@ -48,14 +78,6 @@ Welcome to your new app.
 </div>
 
 
-<div style="display: flex; flex-direction: row;">
-    
-
-
-
-
-
-</div>
 
 
 
