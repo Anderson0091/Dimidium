@@ -1,9 +1,116 @@
-﻿@page "/"
+@page "/"
+@using Microsoft.AspNetCore.Components.Web
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>Bienvenido a mi página de ejemplo</h1>
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<hr>
+<div style="display: flex; flex-direction: row;">
+    
+
+<ul>
+    @foreach (var item in menuItems)
+    {
+        <li><a input="button" href="@item.Url">@item.Text</a></li>
+    }
+</ul>
+
+@code {
+    private List<MenuItem> menuItems = new List<MenuItem>
+    {
+   new MenuItem { Url = "/", Text = "Inicio" },
+        new MenuItem { Url = "/Counter", Text = "Acerca de" },
+        new MenuItem { Url = "/Index", Text = "Contacto" },
+        new MenuItem { Url = "/FetchData", Text = "Servicios" },
+         new MenuItem { Url = "/pg1", Text = "Pruebas" },
+    };
+
+    private class MenuItem
+    {
+        public string Url { get; set; }
+        public string Text { get; set; }
+    }
+}
+</div>
+
+<hr>
+
+
+
+
+<div style="border: 3px solid #ccc; background-color: white; padding: 10px;">
+  
+
+<body  >
+
+
+<h3 >Suma de dos números</h3>
+
+<label>Primer número:</label>
+<input type="number" @bind-value="@numero1" />
+
+<label>Segundo número:</label>
+<input type="number"  @bind-value="@numero2" />
+
+
+   
+
+<h1>El resultado es: @resultado</h1>
+
+
+
+</body>
+
+</div>
+
+
+    <hr>
+
+<div style="border: 1px solid #ccc; background-color: #f2f2f2; padding: 10px;">
+ <button @onclick="Resta">Restar</button>
+<button @onclick="Sumar">Sumar</button>
+<button @onclick="Dvd">Dividir</button>
+<button @onclick="MTP">Mulriplicar</button>
+
+
+</div>
+
+
+
+
+
+
+@using Microsoft.AspNetCore.Components.Forms;
+
+@code {
+
+    private double numero1;
+    private double numero2;
+    private double resultado;
+
+private void Resta()
+{
+
+ resultado = numero1 - numero2;
+
+}
+    private void Sumar()
+    {
+        resultado = numero1 + numero2;
+    }
+      private void MTP()
+    {
+        resultado = numero1 * numero2;
+    }
+      private void Dvd()
+    {
+        resultado = numero1 / numero2;
+    }
+
+
+ 
+//---------------------------------------------------------------------------------
+
+}
