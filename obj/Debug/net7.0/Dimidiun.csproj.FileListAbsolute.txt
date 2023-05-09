@@ -30,3 +30,35 @@ C:\Users\andy\Documents\GitHub\Dimidium\obj\Debug\net7.0\refint\Dimidiun.dll
 C:\Users\andy\Documents\GitHub\Dimidium\obj\Debug\net7.0\Dimidiun.pdb
 C:\Users\andy\Documents\GitHub\Dimidium\obj\Debug\net7.0\Dimidiun.genruntimeconfig.cache
 C:\Users\andy\Documents\GitHub\Dimidium\obj\Debug\net7.0\ref\Dimidiun.dll
+C:\Prog. IV\Dimidium\bin\Debug\net7.0\appsettings.Development.json
+C:\Prog. IV\Dimidium\bin\Debug\net7.0\appsettings.json
+C:\Prog. IV\Dimidium\bin\Debug\net7.0\Dimidiun.staticwebassets.runtime.json
+C:\Prog. IV\Dimidium\bin\Debug\net7.0\Dimidiun.exe
+C:\Prog. IV\Dimidium\bin\Debug\net7.0\Dimidiun.deps.json
+C:\Prog. IV\Dimidium\bin\Debug\net7.0\Dimidiun.runtimeconfig.json
+C:\Prog. IV\Dimidium\bin\Debug\net7.0\Dimidiun.dll
+C:\Prog. IV\Dimidium\bin\Debug\net7.0\Dimidiun.pdb
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.csproj.AssemblyReference.cache
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.AssemblyInfoInputs.cache
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.AssemblyInfo.cs
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.csproj.CoreCompileInputs.cache
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.MvcApplicationPartsAssemblyInfo.cache
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.RazorAssemblyInfo.cache
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.RazorAssemblyInfo.cs
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\staticwebassets\msbuild.Dimidiun.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\staticwebassets\msbuild.build.Dimidiun.props
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Dimidiun.props
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Dimidiun.props
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\staticwebassets.build.json
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\staticwebassets.development.json
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\scopedcss\bundle\Dimidiun.styles.css
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\scopedcss\projectbundle\Dimidiun.bundle.scp.css
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.dll
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\refint\Dimidiun.dll
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.pdb
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\Dimidiun.genruntimeconfig.cache
+C:\Prog. IV\Dimidium\obj\Debug\net7.0\ref\Dimidiun.dll
