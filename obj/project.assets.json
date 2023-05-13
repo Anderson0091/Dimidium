@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Prog. IV\\Dimidium\\Dimidiun.csproj",
+      "projectUniqueName": "C:\\Prog. IV\\ADimidium\\Dimidiun.csproj",
       "projectName": "Dimidiun",
-      "projectPath": "C:\\Prog. IV\\Dimidium\\Dimidiun.csproj",
+      "projectPath": "C:\\Prog. IV\\ADimidium\\Dimidiun.csproj",
       "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Prog. IV\\Dimidium\\obj\\",
+      "outputPath": "C:\\Prog. IV\\ADimidium\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
