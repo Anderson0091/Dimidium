@@ -13,6 +13,7 @@
     public string Genero { get; set; }
     public string Ubicacion { get; set; }
     public string FotoPerfil { get; set; }
-    
+    public string Intereses { get; set; }
+
     }
 }
