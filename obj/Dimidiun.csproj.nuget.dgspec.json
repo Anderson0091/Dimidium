@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Prog. IV\\ADimidium\\Dimidiun.csproj": {}
+    "C:\\Prog. IV\\Dimidium\\Dimidiun.csproj": {}
   },
   "projects": {
-    "C:\\Prog. IV\\ADimidium\\Dimidiun.csproj": {
+    "C:\\Prog. IV\\Dimidium\\Dimidiun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Prog. IV\\ADimidium\\Dimidiun.csproj",
+        "projectUniqueName": "C:\\Prog. IV\\Dimidium\\Dimidiun.csproj",
         "projectName": "Dimidiun",
-        "projectPath": "C:\\Prog. IV\\ADimidium\\Dimidiun.csproj",
+        "projectPath": "C:\\Prog. IV\\Dimidium\\Dimidiun.csproj",
         "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-        "outputPath": "C:\\Prog. IV\\ADimidium\\obj\\",
+        "outputPath": "C:\\Prog. IV\\Dimidium\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
