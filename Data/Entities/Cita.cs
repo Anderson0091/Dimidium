@@ -8,6 +8,7 @@ namespace Dimidiun.Data.Entities
     {
         [Key]
         public int IdCita { get; set; }
+        
         public int IdUsuario1 { get; set; }
         [ForeignKey("IdUsuario1")]
         public Usuario Usuario1 { get; set; }
