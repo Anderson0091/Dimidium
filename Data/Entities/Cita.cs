@@ -1,9 +1,7 @@
 ﻿using Dimidiun.Data.Request;
 using Dimidiun.Data.Response;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Dimidiun.Data.Entities
 {
@@ -11,17 +9,17 @@ namespace Dimidiun.Data.Entities
     {
         [Key]
         public int IdCita { get; set; }
-        
+
         public int IdUsuario1 { get; set; }
         [ForeignKey("IdUsuario1")]
-        public Usuario Usuario1 { get; set; }
+        public Usuario? Usuario1 { get; set; }
 
         public int IdUsuario2 { get; set; }
         [ForeignKey("IdUsuario2")]
-        public Usuario Usuario2 { get; set; }
+        public Usuario? Usuario2 { get; set; }
 
         public DateTime FechaCita { get; set; }
-        public string Ubicacion { get; set; }
+        public string? Ubicacion { get; set; }
 
         public static Cita Crear(CitaRequest cita)
        => new Cita()

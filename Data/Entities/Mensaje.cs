@@ -1,6 +1,5 @@
 ﻿using Dimidiun.Data.Request;
 using Dimidiun.Data.Response;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,7 +9,7 @@ namespace Dimidiun.Data.Entities
     {
         [Key]
         public int IdMensaje { get; set; }
-        
+
         public int IdRemitente { get; set; }
         [ForeignKey("IdRemitente")]
         public Usuario Remitente { get; set; }
