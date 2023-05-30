@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dimidiun.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20230527051101_InitialCreate")]
+    [Migration("20230530154528_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -43,14 +43,19 @@ namespace Dimidiun.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Ubicacion")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Usuario1IdUsuario")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Usuario2IdUsuario")
+                        .HasColumnType("int");
 
                     b.HasKey("IdCita");
 
-                    b.HasIndex("IdUsuario1");
+                    b.HasIndex("Usuario1IdUsuario");
 
-                    b.HasIndex("IdUsuario2");
+                    b.HasIndex("Usuario2IdUsuario");
 
                     b.ToTable("Citas");
                 });
@@ -67,6 +72,9 @@ namespace Dimidiun.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("DestinatarioIdUsuario")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("FechaEnvio")
                         .HasColumnType("datetime2");
 
@@ -76,11 +84,14 @@ namespace Dimidiun.Migrations
                     b.Property<int>("IdRemitente")
                         .HasColumnType("int");
 
+                    b.Property<int>("RemitenteIdUsuario")
+                        .HasColumnType("int");
+
                     b.HasKey("IdMensaje");
 
-                    b.HasIndex("IdDestinatario");
+                    b.HasIndex("DestinatarioIdUsuario");
 
-                    b.HasIndex("IdRemitente");
+                    b.HasIndex("RemitenteIdUsuario");
 
                     b.ToTable("Mensajes");
                 });
@@ -167,15 +178,11 @@ namespace Dimidiun.Migrations
                 {
                     b.HasOne("Dimidiun.Data.Entities.Usuario", "Usuario1")
                         .WithMany()
-                        .HasForeignKey("IdUsuario1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Usuario1IdUsuario");
 
                     b.HasOne("Dimidiun.Data.Entities.Usuario", "Usuario2")
                         .WithMany()
-                        .HasForeignKey("IdUsuario2")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Usuario2IdUsuario");
 
                     b.Navigation("Usuario1");
 
@@ -186,13 +193,13 @@ namespace Dimidiun.Migrations
                 {
                     b.HasOne("Dimidiun.Data.Entities.Usuario", "Destinatario")
                         .WithMany()
-                        .HasForeignKey("IdDestinatario")
+                        .HasForeignKey("DestinatarioIdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Dimidiun.Data.Entities.Usuario", "Remitente")
                         .WithMany()
-                        .HasForeignKey("IdRemitente")
+                        .HasForeignKey("RemitenteIdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

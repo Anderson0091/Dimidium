@@ -1,8 +1,6 @@
 ﻿using Dimidiun.Data.Request;
 using Dimidiun.Data.Response;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Dimidiun.Data.Entities
 {
@@ -12,7 +10,7 @@ namespace Dimidiun.Data.Entities
         public int IdPerfil { get; set; }
 
         public int IdUsuario { get; set; }
-        [ForeignKey("IdUsuario")]
+        //  [ForeignKey("IdUsuario")]
         public Usuario Usuario { get; set; }
 
         public string Descripcion { get; set; }
@@ -43,8 +41,8 @@ namespace Dimidiun.Data.Entities
         public PerfilResponse ToResponse()
        => new PerfilResponse()
        {
-          Descripcion = Descripcion,
-          Gustos = Gustos,
+           Descripcion = Descripcion,
+           Gustos = Gustos,
        };
     }
 }

@@ -3468,11 +3468,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tareas\\Repositorios\\1\\Dimidiun.csproj",
+      "projectUniqueName": "D:\\Tareas\\Repositorios\\1\\Nueva carpeta (2)\\Dimidiun.csproj",
       "projectName": "Dimidiun",
-      "projectPath": "D:\\Tareas\\Repositorios\\1\\Dimidiun.csproj",
+      "projectPath": "D:\\Tareas\\Repositorios\\1\\Nueva carpeta (2)\\Dimidiun.csproj",
       "packagesPath": "C:\\Users\\andy\\.nuget\\packages\\",
-      "outputPath": "D:\\Tareas\\Repositorios\\1\\obj\\",
+      "outputPath": "D:\\Tareas\\Repositorios\\1\\Nueva carpeta (2)\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

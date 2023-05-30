@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KT0LaTlg5t8hctDgVYzfaMxp7dj5rl2yGLwgNZgBpv6Hj9D3p9/hGBgV1hSSooCyzPPbqcBeqFzHAOkyNvcR+A==",
+  "dgSpecHash": "EAnFtIHAZzEPjoywKZeOGeBaGQvAeBtgP54qH5SYixVyGpIEPfhaxYmTcWq+7/GSAnedV11KQIYa6rqOpVKmpQ==",
   "success": true,
-  "projectFilePath": "D:\\Tareas\\Repositorios\\1\\Dimidiun.csproj",
+  "projectFilePath": "D:\\Tareas\\Repositorios\\1\\Nueva carpeta (2)\\Dimidiun.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andy\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\andy\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

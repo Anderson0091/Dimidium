@@ -39,25 +39,16 @@ namespace Dimidiun.Migrations
                     IdCita = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdUsuario1 = table.Column<int>(type: "int", nullable: false),
+                    Usuario1IdUsuario = table.Column<int>(type: "int", nullable: true),
                     IdUsuario2 = table.Column<int>(type: "int", nullable: false),
+                    Usuario2IdUsuario = table.Column<int>(type: "int", nullable: true),
                     FechaCita = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Citas", x => x.IdCita);
-                    table.ForeignKey(
-                        name: "FK_Citas_Usuarios_IdUsuario1",
-                        column: x => x.IdUsuario1,
-                        principalTable: "Usuarios",
-                        principalColumn: "IdUsuario",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Citas_Usuarios_IdUsuario2",
-                        column: x => x.IdUsuario2,
-                        principalTable: "Usuarios",
-                        principalColumn: "IdUsuario",
-                        onDelete: ReferentialAction.Restrict);
+
                 });
 
             migrationBuilder.CreateTable(
@@ -67,25 +58,16 @@ namespace Dimidiun.Migrations
                     IdMensaje = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdRemitente = table.Column<int>(type: "int", nullable: false),
+                    RemitenteIdUsuario = table.Column<int>(type: "int", nullable: false),
                     IdDestinatario = table.Column<int>(type: "int", nullable: false),
+                    DestinatarioIdUsuario = table.Column<int>(type: "int", nullable: false),
                     ContenidoMensaje = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FechaEnvio = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Mensajes", x => x.IdMensaje);
-                    table.ForeignKey(
-                        name: "FK_Mensajes_Usuarios_IdDestinatario",
-                        column: x => x.IdDestinatario,
-                        principalTable: "Usuarios",
-                        principalColumn: "IdUsuario",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Mensajes_Usuarios_IdRemitente",
-                        column: x => x.IdRemitente,
-                        principalTable: "Usuarios",
-                        principalColumn: "IdUsuario",
-                        onDelete: ReferentialAction.Restrict);
+
                 });
 
             migrationBuilder.CreateTable(
@@ -106,28 +88,28 @@ namespace Dimidiun.Migrations
                         column: x => x.IdUsuario,
                         principalTable: "Usuarios",
                         principalColumn: "IdUsuario",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Citas_IdUsuario1",
+                name: "IX_Citas_Usuario1IdUsuario",
                 table: "Citas",
-                column: "IdUsuario1");
+                column: "Usuario1IdUsuario");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Citas_IdUsuario2",
+                name: "IX_Citas_Usuario2IdUsuario",
                 table: "Citas",
-                column: "IdUsuario2");
+                column: "Usuario2IdUsuario");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Mensajes_IdDestinatario",
+                name: "IX_Mensajes_DestinatarioIdUsuario",
                 table: "Mensajes",
-                column: "IdDestinatario");
+                column: "DestinatarioIdUsuario");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Mensajes_IdRemitente",
+                name: "IX_Mensajes_RemitenteIdUsuario",
                 table: "Mensajes",
-                column: "IdRemitente");
+                column: "RemitenteIdUsuario");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Perfiles_IdUsuario",
