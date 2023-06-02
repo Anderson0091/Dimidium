@@ -1,5 +1,6 @@
 using Dimidiun.Data;
 using Dimidiun.Data.Context;
+using Dimidiun.Data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,10 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddDbContext<MyDbContext>();
 builder.Services.AddScoped<IMyDbContext, MyDbContext>();
+builder.Services.AddScoped<IUsuarioServices, UsuarioServices>();
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
