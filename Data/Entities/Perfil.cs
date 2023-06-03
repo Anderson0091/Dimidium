@@ -10,7 +10,7 @@ namespace Dimidiun.Data.Entities
         public int IdPerfil { get; set; }
 
         public int IdUsuario { get; set; }
-        //  [ForeignKey("IdUsuario")]
+        // [ForeignKey("IdUsuario")]
         public Usuario Usuario { get; set; }
 
         public string Descripcion { get; set; }
