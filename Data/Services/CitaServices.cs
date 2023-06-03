@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Dimidiun.Data.Services
 {
-    public class CitaServices
+    public class CitaServices : ICitaServices
     {
         private readonly IMyDbContext dbContext;
 
