@@ -1,4 +1,6 @@
-﻿namespace Dimidiun.Data.Response
+﻿using Dimidiun.Data.Request;
+
+namespace Dimidiun.Data.Response
 {
     public class UsuarioResponse
     {
@@ -13,5 +15,25 @@
         public string Ubicacion { get; set; }
         public string FotoPerfil { get; set; }
         public string Intereses { get; set; }
+
+
+
+        public UsuarioRequest ToRequest()
+        {
+            return new UsuarioRequest
+            {
+                IdUsuario = IdUsuario,
+                Nombre = Nombre,
+                Apellido = Apellido,
+                Edad = Edad,
+                Telefono = Telefono,
+                Email = Email,
+                Contraseña = Contraseña,
+                Genero = Genero,
+                Ubicacion = Ubicacion,
+                FotoPerfil = FotoPerfil,
+                Intereses = Intereses
+            };
+        }
     }
 }

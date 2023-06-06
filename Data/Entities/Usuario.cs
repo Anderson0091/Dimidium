@@ -22,6 +22,7 @@ namespace Dimidiun.Data.Entities
         public static Usuario Crear(UsuarioRequest usuario)
         => new Usuario()
         {
+            //IdUsuario=usuario.IdUsuario,
             Nombre = usuario.Nombre,
             Apellido = usuario.Apellido,
             Edad = usuario.Edad,
@@ -92,6 +93,7 @@ namespace Dimidiun.Data.Entities
         public UsuarioResponse ToResponse()
         => new()
         {
+            IdUsuario = IdUsuario,
             Nombre = Nombre,
             Apellido = Apellido,
             Edad = Edad,
