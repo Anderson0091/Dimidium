@@ -26,9 +26,48 @@ else{
 					<InputText class="form-control" @bind-Value="@request.Nombre"></InputText>
 				</div>
 					 <div class="mb-3 input-group">
+					<label class="input-group-text">Apellido</label>
+					<InputText class="form-control" @bind-Value="@request.Apellido"></InputText>
+				</div>
+
+				<div class="mb-3 input-group">
+					<label class="input-group-text">Contraseña</label>
+					<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
+				</div>
+				<div class="mb-3 input-group">
 					<label class="input-group-text">Telefono</label>
 					<InputText class="form-control" @bind-Value="@request.Telefono"></InputText>
 				</div>
+
+				<div class="mb-3 input-group">
+					<label class="input-group-text">Edad</label>
+					<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
+				</div>
+				<div class="mb-3 input-group">
+					<label class="input-group-text">Email</label>
+					<InputText class="form-control" @bind-Value="@request.Email"></InputText>
+				</div>
+
+
+				<div class="mb-3 input-group">
+					<label class="input-group-text">Genero</label>
+					<InputText class="form-control" @bind-Value="@request.Genero"></InputText>
+				</div>
+				<div class="mb-3 input-group">
+					<label class="input-group-text">Ubicacion</label>
+					<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
+				</div>
+
+				<div class="mb-3 input-group">
+					<label class="input-group-text">Foto</label>
+					<InputText class="form-control" @bind-Value="@request.FotoPerfil"></InputText>
+				</div>
+				<div class="mb-3 input-group">
+					<label class="input-group-text">Intereses</label>
+					<InputText class="form-control" @bind-Value="@request.Intereses"></InputText>
+				</div>
+
+
 				<div class="btn-group">
 					<button type="submit" class="btn btn-outline-success">Guardar</button>
 					<button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
@@ -46,8 +85,14 @@ else{
 							<div class="card-body">
 									<label class="card-title">@usuario.Nombre</label>
 							<div class="card-text">
-									<label>@usuario.Telefono</label>
+									<label>@usuario.Nombre</label>
+									<label>@usuario.Apellido</label>
 									<label>@usuario.Edad</label>
+									<label>@usuario.Telefono</label>
+								<label>@usuario.Email</label>
+								<label>@usuario.Genero</label>
+								<label>@usuario.Ubicacion</label>
+								<label>@usuario.Intereses</label>
 							</div>
 								<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
 								<button @onclick="()=>Eliminar(usuario)"class="btn btn-danger">Eliminar</button>

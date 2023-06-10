@@ -88,7 +88,7 @@ namespace Dimidiun.Data.Services
             try
             {
                 var usuarios = await dbContext.Usuarios
-                    .Include(c => c.Nombre)
+                    
                     .Where(c =>
                         (c.Nombre + " "
                         + c.Apellido + " "
