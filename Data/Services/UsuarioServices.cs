@@ -88,17 +88,16 @@ namespace Dimidiun.Data.Services
             try
             {
                 var usuarios = await dbContext.Usuarios
-                    
                     .Where(c =>
                         (c.Nombre + " "
                         + c.Apellido + " "
-                        + c.Edad + " "
+                        + c.Edad
                         +c.Ubicacion + " "
                         + c.Telefono + " "
                         + c.Email + "  "
                         + c.Genero + "  "
                         + c.Intereses + " "
-                        + c.FotoPerfil + " "
+                        + c.FotoPerfil
                         )
                         .ToLower()
                         .Contains(filtro.ToLower()
