@@ -88,29 +88,27 @@
 							<div class="card-body">
 									<label class="card-title">ID: @usuario.IdUsuario</label>
 							<div class="card-text">
-							<img src="@usuario.FotoPerfil" alt="Foto de perfil"  class="profile-image" />
-												
+										<img src="@usuario.FotoPerfil" alt="Foto de perfil"  class="profile-image" />
+												<br>
 										<label>Nombre: @usuario.Nombre</label>
 										<label>@usuario.Apellido</label>
-							</div>
-							<div class="card-text">
-										<label>Edad: @usuario.Edad</label>
-							</div>
-							<div class="card-text">
+										<br>
+										<label>Edad: @usuario.Edad</label> 
+										<br>
+										<label>Sexo: @usuario.Genero</label>
+										<br>
 										<label>Tel: @usuario.Telefono</label>
+										<br>
+										<label> Ubicacion: @usuario.Ubicacion</label>
+										<br>
+										<label>Intereses: @usuario.Intereses</label>
 							</div>
-									<div class="card-text">
-												<label> Edad: @usuario.Ubicacion</label>
-									</div>
-											<div class="card-text">
-												<label>Intereses: @usuario.Intereses</label>
-									</div>
-									
-
+								
 								<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
 								<button @onclick="()=>Eliminar(usuario)"class="btn btn-danger">Eliminar</button>
 							</div>
 						</div>
+									
 				}
 
 			</div>
