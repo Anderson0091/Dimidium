@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0lBq+kVSfaibKRN01sfu3KLrqKd5UE21wWDe+sI0Bvk=",
+  "Hash": "DYohkN2jd/0Srq5BtV0zLnGpnYIiyNZ1j2pFA1rI7gU=",
   "Source": "Dimidiun",
   "BasePath": "_content/Dimidiun",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Dimidiun\\wwwroot",
       "Source": "Dimidiun",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Dimidiun.styles.css",
+      "Identity": "C:\\Prog. IV\\PDimidium\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Dimidiun.styles.css",
       "SourceId": "Dimidiun",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "Dimidiun.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\andy\\source\\repos\\Dimidium\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Dimidiun.styles.css"
+      "OriginalItemSpec": "C:\\Prog. IV\\PDimidium\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Dimidiun.styles.css"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Dimidiun.bundle.scp.css",
+      "Identity": "C:\\Prog. IV\\PDimidium\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Dimidiun.bundle.scp.css",
       "SourceId": "Dimidiun",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "Dimidiun.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\andy\\source\\repos\\Dimidium\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Dimidiun.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Prog. IV\\PDimidium\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Dimidiun.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\bootstrap\\Imagenes\\7.jpg",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\bootstrap\\Imagenes\\7.jpg",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/bootstrap/Imagenes/7.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\Imagenes\\7.jpg"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\css\\site.css",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\favicon.png",
+      "Identity": "C:\\Prog. IV\\PDimidium\\wwwroot\\favicon.png",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "ContentRoot": "C:\\Prog. IV\\PDimidium\\wwwroot\\",
       "BasePath": "_content/Dimidiun",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
