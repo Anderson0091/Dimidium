@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lmwXb4Q0gKsm5cDSgNzAeGkSNxU1HbZiEQN3JSAEQyA=",
+  "Hash": "0lBq+kVSfaibKRN01sfu3KLrqKd5UE21wWDe+sI0Bvk=",
   "Source": "Dimidiun",
   "BasePath": "_content/Dimidiun",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\bootstrap\\Imagenes\\7.jpg",
+      "SourceId": "Dimidiun",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\",
+      "BasePath": "_content/Dimidiun",
+      "RelativePath": "css/bootstrap/Imagenes/7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\Imagenes\\7.jpg"
     },
     {
       "Identity": "C:\\Users\\andy\\source\\repos\\Dimidium\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",

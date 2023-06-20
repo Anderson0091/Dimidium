@@ -2,4 +2,53 @@
 
 <PageTitle>Pagina #1</PageTitle>
 
-<h1>Pagina1</h1>
+<EditForm Model="@perfil" OnValidSubmit="GuardarPerfil">
+    <DataAnnotationsValidator />
+
+
+    <div class="form-group">
+        <label for="foto">Foto de perfil:</label>
+        <InputFile id="foto" class="form-control" OnChange="CargarFoto" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</EditForm>
+
+
+@code{
+
+
+    public class PerfilModel
+    {
+        public string Nombre { get; set; }
+        public string CorreoElectronico { get; set; }
+        public byte[] FotoPerfil { get; set; }
+    }
+
+
+    private PerfilModel perfil = new PerfilModel();
+    private IBrowserFile fotoSeleccionada;
+
+    private async Task CargarFoto(InputFileChangeEventArgs e)
+    {
+        fotoSeleccionada = e.File;
+
+        using (var stream = fotoSeleccionada.OpenReadStream())
+        {
+            var buffer = new byte[fotoSeleccionada.Size];
+            await stream.ReadAsync(buffer, 0, buffer.Length);
+            perfil.FotoPerfil = buffer;
+        }
+    }
+
+    private void GuardarPerfil()
+    {
+        // Lógica para guardar el perfil, incluyendo la foto de perfil
+        // por ejemplo, puedes guardar los datos en una base de datos
+        // o en un almacenamiento de archivos.
+    }
+
+
+
+
+}

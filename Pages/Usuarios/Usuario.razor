@@ -1,20 +1,17 @@
 ﻿@page "/Usuario"
 
-<h3>Usuarios</h3>
 
 @if (!ShowForm)
-{
-		<h3>Usuarios (@Usuarios.Count)</h3>
+{ <div class="la314">
+		<h2>Usuarios (@Usuarios.Count)</h2>
 		<div class="mb-2">
-			<button class="btn btn-success"
+			<button class="btn btn-secondary"
             @onclick="()=>{ShowForm = !ShowForm;}">
-				Agregar
+				Registrar
 			</button>
 		</div>
-
+</div>
 }
-
-	
 	<div class="container">
 @if (ShowForm)
 {
@@ -63,18 +60,46 @@
 
 				<div class="mb-3 input-group">
 					<label class="input-group-text">Foto</label>
-					<InputText class="form-control" @bind-Value="@request.FotoPerfil"></InputText>
+					<InputFile class="form-control" OnChange="CargarFoto" @bind-Value="@request.FotoPerfil"></InputFile>
 				</div>
 				<div class="mb-3 input-group">
 					<label class="input-group-text">Intereses</label>
 					<InputText class="form-control" @bind-Value="@request.Intereses"></InputText>
+
+
 				</div>
 
 
-				<div class="btn-group">
-					<button type="submit" class="btn btn-outline-success">Guardar</button>
-					<button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
-				</div>
+
+			<div class="btn-group">
+				<button type="submit" class="btn btn-outline-success">Guardar</button>
+				<button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
+			</div>
+
+			
+
+
+
+
+			<form action="" class="formulario__register">
+				<h2>Regístrarse</h2>
+				<input type="text" placeholder="Nombre">
+				<input type="text" placeholder="Apellido">
+				<input type="number" placeholder="Telefono">
+				<input type="text" placeholder="Correo Electronico">
+				<input type="password" placeholder="Contraseña">
+				<button>Regístrarse</button>
+			</form>
+
+
+
+
+
+
+
+
+
+
 				</EditForm>
 				}
 
@@ -84,10 +109,10 @@
 				<div Class="container">
 				@foreach (var usuario in Usuarios)
 				{
-						<div class="card" style="width:18rem;">
-							<div class="card-body">
-									<label class="card-title">ID: @usuario.IdUsuario</label>
-							<div class="card-text">
+					
+									
+							<div class="la314">
+					<label class="card-title">ID: @usuario.IdUsuario</label>
 										<img src="@usuario.FotoPerfil" alt="Foto de perfil"  class="profile-image" />
 												<br>
 										<label>Nombre: @usuario.Nombre</label>
@@ -102,12 +127,16 @@
 										<label> Ubicacion: @usuario.Ubicacion</label>
 										<br>
 										<label>Intereses: @usuario.Intereses</label>
-							</div>
-								
-								<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
-								<button @onclick="()=>Eliminar(usuario)"class="btn btn-danger">Eliminar</button>
-							</div>
+
+
+							<br>
+						<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
+						<button @onclick="()=>Eliminar(usuario)" class="btn btn-danger">Eliminar</button>
+
 						</div>
+						
+								
+						
 									
 				}
 
@@ -158,7 +187,7 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-			await CargarUsuarios();
+		await CargarUsuarios();
 	}
 
 
@@ -212,6 +241,25 @@
 			StateHasChanged();
 		}
 	}
+
+	private IBrowserFile fotoSeleccionada;
+
+		
+	private async Task CargarFoto(InputFileChangeEventArgs e)
+	{
+		fotoSeleccionada = e.File;
+
+		using (var stream = fotoSeleccionada.OpenReadStream())
+		{
+			using (var memoryStream = new MemoryStream())
+			{
+				await stream.CopyToAsync(memoryStream);
+				var bytes = memoryStream.ToArray();
+				request.FotoPerfil = Convert.ToBase64String(bytes);
+			}
+		}
+	}
+
 
 
 }

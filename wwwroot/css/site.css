@@ -2,6 +2,7 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* background-image:src(bootstrap/Imagenes/7.jpg);*/
 }
 
 h1:focus {
@@ -20,6 +21,7 @@ a, .btn-link {
     object-fit: cover; /* Ajusta la imagen para llenar el círculo sin deformarse */
     display: block; /* Hace que la imagen sea un elemento de bloque */
     margin: 0 auto; /* Centra la imagen horizontalmente */
+   
 }
 
 
@@ -77,3 +79,152 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+    /*/--------------------------------------------------------------------------*/
+.contenedor__todo {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+
+
+
+
+.contenedor__login-register form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+.caja__trasera {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(13, 14, 14, 0.603);
+}
+
+    .caja__trasera div {
+        margin: 100px 40px;
+        color: white;
+        transition: all 500ms;
+    }
+
+.Login {
+    width: 100%;
+    padding: 80px 20px;
+    background-image: linear-gradient(180deg, rgba(6, 232, 248, 0.6) 0%, #080808eb 60%);
+    position: absolute;
+    border-radius: 20px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    /**/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    display: block;
+    /**/
+    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+    width: 100%;
+
+  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+
+
+.la314 {
+    width: 100%;
+    padding: 80px 20px;
+    background-image: linear-gradient(180deg, rgba(6, 232, 248, 0.6) 0%, #080808eb 60%);
+   
+    border-radius: 20px;
+
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    /**/
+    display: flex;
+    opacity: 1;
+    display: block;
+    /**/
+    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+
+
+
+
+
+
+
+
+
+
+        .caja_trasera button {
+            margin-top: 30px;
+        }
+
+        .caja__trasera div h3 {
+            font-weight: 400;
+            font-size: 26px;
+        }
+
+        .caja__trasera div p {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+    .caja__trasera button {
+        padding: 10px 40px;
+        border: 2px solid #fff;
+        font-size: 14px;
+        background: transparent;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        outline: none;
+        transition: all 300ms;
+    }
+
+        .caja__trasera button:hover {
+            background: #fff;
+            color: #46A2FD;
+        }
+
+/*Formularios*/
+body {
+    background-image: url(bootstrap/Imagenes/7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
