@@ -228,3 +228,41 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+
+
+
+
+
+
+
+/*/*/
+
+
+nav {
+    border: 1px solid #09121cd9;
+    background-image: linear-gradient(#46a2fdbf 0%, #46a2fd77 60%);
+
+}
+
+#navbarNav .navbar-nav a {
+    padding: 1.2rem 2rem;
+}
+
+@media (max-width: 991.98px) {
+    .nav-vertical {
+        border: 1px solid #ffffff8c;
+        right: -301px;
+        position: absolute;
+        width: 300px;
+        top: 57px;
+        transition: all .2s ease-out;
+    }
+
+
+    .Letrar{
+        font: vivaldi;
+    }
+    .active {
+        right: -1px;
+    }
+}
