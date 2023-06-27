@@ -10,9 +10,13 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: #0071c1;
+    color: midnightblue;
 }
 
+a{
+
+    color: white;
+}
 .profile-image {
     width: 100px; /* Ajusta el ancho y alto según tus necesidades */
     height: 100px;
@@ -80,6 +84,20 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
+
+
+    .vivaldi{
+        font-family:Vivaldi;
+       font-size:50px;
+    
+    }
+
+    .letra.b{
+        color: white;
+    }
+    .L30{
+        font-size:30px;
+    }
     /*/--------------------------------------------------------------------------*/
 .contenedor__todo {
     width: 100%;
@@ -219,10 +237,10 @@ a, .btn-link {
             background: #fff;
             color: #46A2FD;
         }
-
+        
 /*Formularios*/
 body {
-    background-image: url(bootstrap/Imagenes/7.jpg);
+    background-image: url(../Imagenes/7.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -1,16 +1,51 @@
 ﻿@page "/Usuario"
 
 
+
+
+
+
+
+
+
+
+
+<div class="la314">
 @if (!ShowForm)
-{ <div class="la314">
-		<h2>Usuarios (@Usuarios.Count)</h2>
-		<div class="mb-2">
-			<button class="btn btn-secondary"
-            @onclick="()=>{ShowForm = !ShowForm;}">
-				Registrar
-			</button>
-		</div>
+				@foreach (var usuario in Usuarios)
+				{				
+							<div class="la314">
+										<label class="card-title">ID: @usuario.IdUsuario</label>
+										<img src="@usuario.FotoPerfil" alt="Foto de perfil"  class="profile-image" />
+												<br>
+										<label>Nombre: @usuario.Nombre</label>
+										<label>@usuario.Apellido</label>
+										<br>
+										<label>Edad: @usuario.Edad</label> 
+										<br>
+										<label>Sexo: @usuario.Genero</label>
+										<br>
+										<label>Tel: @usuario.Telefono</label>
+										<br>
+										<label> Ubicacion: @usuario.Ubicacion</label>
+										<br>
+										<label>Intereses: @usuario.Intereses</label>
+
+
+					<br>		
+						<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
+						<button @onclick="()=>Eliminar(usuario)" class="btn btn-danger">Eliminar</button>
+						<button class="btn btn-secondary" @onclick="()=>{ShowForm = !ShowForm;}">Registrar</button>
+						</div>
+						
+			<h2>Usuarios (@Usuarios.Count)</h2>
+		
+		
+		
+						
+				}
 </div>
+
 }
 	<div class="container">
 @if (ShowForm)
@@ -78,48 +113,10 @@
 
 				</EditForm>
 				}
-
-				    else
-					 {
-       
-				<div Class="container">
-				@foreach (var usuario in Usuarios)
-				{
-					
-									
-							<div class="la314">
-					<label class="card-title">ID: @usuario.IdUsuario</label>
-										<img src="@usuario.FotoPerfil" alt="Foto de perfil"  class="profile-image" />
-												<br>
-										<label>Nombre: @usuario.Nombre</label>
-										<label>@usuario.Apellido</label>
-										<br>
-										<label>Edad: @usuario.Edad</label> 
-										<br>
-										<label>Sexo: @usuario.Genero</label>
-										<br>
-										<label>Tel: @usuario.Telefono</label>
-										<br>
-										<label> Ubicacion: @usuario.Ubicacion</label>
-										<br>
-										<label>Intereses: @usuario.Intereses</label>
-
-
-							<br>
-						<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
-						<button @onclick="()=>Eliminar(usuario)" class="btn btn-danger">Eliminar</button>
-
-						</div>
-						
-								
-						
-									
-				}
-
-			</div>
-        }
-    
 </div>
+	
+    
+
 
 
 @code{

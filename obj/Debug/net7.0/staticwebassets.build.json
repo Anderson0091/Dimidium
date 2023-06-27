@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CgpIf96RuMUDCimO3OmW1opUSXwPEpKvgWMn0Z7oyA4=",
+  "Hash": "NKoKQEZnmBuT5sFO+qNa8S8lXaYF7IyYox/NE70tST8=",
   "Source": "Dimidiun",
   "BasePath": "_content/Dimidiun",
   "Mode": "Default",
@@ -83,40 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\css\\bootstrap\\Imagenes\\7.jpg",
-      "SourceId": "Dimidiun",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\",
-      "BasePath": "_content/Dimidiun",
-      "RelativePath": "css/bootstrap/Imagenes/7.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\Imagenes\\7.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "Dimidiun",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\",
-      "BasePath": "_content/Dimidiun",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
@@ -221,6 +187,23 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
+      "Identity": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "Dimidiun",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\",
+      "BasePath": "_content/Dimidiun",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
+    },
+    {
       "Identity": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "Dimidiun",
       "SourceType": "Discovered",
@@ -287,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\Imagenes\\7.jpg",
+      "SourceId": "Dimidiun",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andy\\source\\repos\\Dimi\\wwwroot\\",
+      "BasePath": "_content/Dimidiun",
+      "RelativePath": "Imagenes/7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\7.jpg"
     }
   ]
 }

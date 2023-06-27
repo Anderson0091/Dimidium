@@ -2,27 +2,234 @@
 @using Microsoft.AspNetCore.Components.Web
 
 <PageTitle>Index</PageTitle>
-<body >
-	<main>
 
 
 
+@if (!ShowForm)
+{
+	<body>
+		<main>
+			<div class="la314">
+				<h2 class="">Iniciar Sesión</h2>
+				<input type="text" placeholder="Correo Electronico">
+				<br />
+				<input type="password" placeholder="Contraseña">
+				<br>
+				<br>
+				<button type="submit" class="btn btn-outline-success">Iniciar Sesión</button>
+				<br>
+				<br>
+				<button class="btn btn-secondary"
+				@onclick="()=>{ShowForm = !ShowForm;}">
+					Registrar
+				</button>
+			</div>
+		</main>
 
-	<div class="Login">
-
-
-		<h2 class="">Iniciar Sesión</h2>
-		<input type="text" placeholder="Correo Electronico">
-		<br />
-		<input type="password" placeholder="Contraseña">
-		<br>
-		<br>
-			<button type="submit" class="btn btn-outline-success">Iniciar Sesión</button>
-
-
+	</body>
+	 <div class="la314">
+		<h2>Usuarios (@Usuarios.Count)</h2>
+		<div class="mb-2">
+			
+		</div>
 	</div>
+}
+<div class="la314">
+	@if (ShowForm)
+	{
+		<h3>@TituloForm</h3>
+		<EditForm Model="request" OnValidSubmit="Send">
+<div class="La314">
+			<div class="mb-3 input-group ">
+				<label class="input-group-text">Nombre</label>
+				<InputText class="form-control" @bind-Value="@request.Nombre"></InputText>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Apellido</label>
+				<InputText class="form-control" @bind-Value="@request.Apellido"></InputText>
+			</div>
+
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Contraseña</label>
+				<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Telefono</label>
+				<InputText class="form-control" @bind-Value="@request.Telefono"></InputText>
+			</div>
+
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Edad</label>
+				<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Email</label>
+				<InputText class="form-control" @bind-Value="@request.Email"></InputText>
+			</div>
 
 
-	</main>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Genero</label>
+				<select class="form-control" @bind="request.Genero">
+					<option>M</option>
+					<option>F</option>
+				</select>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Ubicacion</label>
+				<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
+			</div>
 
-</body>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Foto</label>
+				<InputFile class="form-control" OnChange="CargarFoto" @bind-Value="@request.FotoPerfil"></InputFile>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Intereses</label>
+				<InputText class="form-control" @bind-Value="@request.Intereses"></InputText>
+
+
+			</div>
+
+
+
+			<div class="btn-group">
+				<button type="submit" class="btn btn-outline-success">Guardar</button>
+				<button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
+			</div>
+			</div>
+		</EditForm>
+	}
+
+	else
+	{
+
+		<div Class="container">
+			@foreach (var usuario in Usuarios)
+			{
+
+			}
+
+		</div>
+	}
+
+</div>
+
+
+@code {
+
+	public string TituloForm => request.IdUsuario == 0 ?
+		"Agregar Usuario" : "Modificar Usuario";
+
+	public bool ShowForm { get; set; } = false;
+
+
+	public string Filtro { get; set; } = "";
+
+	public List<UsuarioResponse> Usuarios { get; set; } = new List<UsuarioResponse>();
+
+
+
+	public UsuarioRequest request { get; set; } = new UsuarioRequest();
+
+
+
+	void Cancelar()
+	{
+		request  = new UsuarioRequest();
+		ShowForm = false;
+	}
+
+
+
+
+	async Task CargarUsuarios()
+	{
+		var resultado = await UsuarioServices.Consultar(Filtro);
+
+		if (resultado.Success)
+		{
+			Usuarios = resultado.Data!;
+
+		}
+
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		await CargarUsuarios();
+	}
+
+
+
+
+	public async Task Send()
+	{
+		if (request.IdUsuario == 0)
+		{
+			//Debo registrar el contacto..
+			var r = await UsuarioServices.Crear(request);
+			if (r.Success)
+			{
+				Cancelar();
+				await CargarUsuarios();
+				StateHasChanged();
+			}
+		}
+		else
+		{
+			//Debo solicitar modificar el contacto...
+			var r = await UsuarioServices.Modificar(request);
+			if (r.Success)
+			{
+				Cancelar();
+				await CargarUsuarios();
+				StateHasChanged();
+			}
+		}
+	}
+
+
+
+	public void Seleccionar(int IdUsuario)
+	{
+		ShowForm = true;
+		request = Usuarios
+		.Where(c => c.IdUsuario == IdUsuario)
+		.Select(c => c.ToRequest())
+		.FirstOrDefault()??new UsuarioRequest();
+	}
+
+
+
+	public async Task Eliminar(UsuarioResponse contacto)
+	{
+		var resultado = await UsuarioServices.Eliminar(contacto.ToRequest());
+		if (resultado.Success)
+		{
+			await CargarUsuarios();
+			StateHasChanged();
+		}
+	}
+
+	private IBrowserFile fotoSeleccionada;
+
+
+	private async Task CargarFoto(InputFileChangeEventArgs e)
+	{
+		fotoSeleccionada = e.File;
+
+		using (var stream = fotoSeleccionada.OpenReadStream())
+		{
+			using (var memoryStream = new MemoryStream())
+			{
+				await stream.CopyToAsync(memoryStream);
+				var bytes = memoryStream.ToArray();
+				request.FotoPerfil = Convert.ToBase64String(bytes);
+			}
+		}
+	}
+
+
+
+}
