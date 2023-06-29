@@ -13,7 +13,8 @@
 			<div class="la314">
 				<h2 class="">Iniciar Sesión</h2>
 				<input type="text" placeholder="Correo Electronico">
-				<br />
+				<br>
+				<br>
 				<input type="password" placeholder="Contraseña">
 				<br>
 				<br>
@@ -21,12 +22,11 @@
 				<br>
 				<br>
 				
+				<button class="btn btn-secondary" @onclick="()=>{ShowForm = !ShowForm;}">Registrar</button>
+				
 			</div>
 	
-	<button class="btn btn-secondary"
-				@onclick="()=>{ShowForm = !ShowForm;}">
-					Registrar
-				</button>
+	
 			
 
 }
@@ -50,48 +50,39 @@
 			</div>
 
 			<div class="mb-3 input-group">
-				<label class="input-group-text">Contraseña</label>
-				<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
+				<label class="input-group-text">Edad</label>
+				<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
 			</div>
+
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Ubicacion</label>
+				<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
+			</div>
+
 			<div class="mb-3 input-group">
 				<label class="input-group-text">Telefono</label>
 				<InputText class="form-control" @bind-Value="@request.Telefono"></InputText>
 			</div>
 
 			<div class="mb-3 input-group">
-				<label class="input-group-text">Edad</label>
-				<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
+				<label class="input-group-text">Genero</label>
+				<select class="form-control" @bind="request.Genero">
+					<option>M</option>
+					<option>F</option>
+					<option>Otro</option>
+				</select>
 			</div>
+
+
 			<div class="mb-3 input-group">
 				<label class="input-group-text">Email</label>
 				<InputText class="form-control" @bind-Value="@request.Email"></InputText>
 			</div>
 
-
 			<div class="mb-3 input-group">
-				<label class="input-group-text">Genero</label>
-				<select class="form-control" @bind="request.Genero">
-						<option> Chico  </option>
-					<option>Chica</option>
-				</select>
+				<label class="input-group-text">Contraseña</label>
+				<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
 			</div>
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Ubicacion</label>
-				<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
-			</div>
-
-			<div class="mb-3 input-group ">
-				<label class="input-group-text">Foto</label>
-				<InputText class="form-control"  @bind-Value="@request.FotoPerfil">
-				</InputText>
-			</div>
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Intereses</label>
-				<InputText class="form-control" @bind-Value="@request.Intereses"></InputText>
-
-
-			</div>
-
 
 
 			<div class="btn-group">

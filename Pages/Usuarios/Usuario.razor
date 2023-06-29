@@ -30,10 +30,6 @@
 			</div>
 
 			<div class="mb-3 input-group">
-				<label class="input-group-text">Contraseña</label>
-				<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
-			</div>
-			<div class="mb-3 input-group">
 				<label class="input-group-text">Telefono</label>
 				<InputText class="form-control" @bind-Value="@request.Telefono"></InputText>
 			</div>
@@ -42,39 +38,22 @@
 				<label class="input-group-text">Edad</label>
 				<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
 			</div>
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Email</label>
-				<InputText class="form-control" @bind-Value="@request.Email"></InputText>
-			</div>
 
-
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Genero</label>
-				<select class="form-control" @bind="request.Genero">
-					<option>M</option>
-					<option>F</option>
-				</select>
-			</div>
 			<div class="mb-3 input-group">
 				<label class="input-group-text">Ubicacion</label>
 				<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
 			</div>
 
 			<div class="mb-3 input-group">
-				<label class="input-group-text">Foto</label>
-				<InputText class="form-control" @bind-Value="@request.FotoPerfil"></InputText>
-
+				<label class="input-group-text">Email</label>
+				<InputText class="form-control" @bind-Value="@request.Email"></InputText>
 			</div>
+
 			<div class="mb-3 input-group">
-				<label class="input-group-text">Intereses</label>
-				<InputText class="form-control" @bind-Value="@request.Intereses"></InputText>
-
-
+				<label class="input-group-text">Contraseña</label>
+				<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
 			</div>
-
-
-
-
+			<br>
 
 			<div class="btn-group">
 				<button type="submit" class="btn btn-outline-success">Guardar</button>
@@ -106,8 +85,6 @@
 					<label>Tel: @usuario.Telefono</label>
 					<br>
 					<label> Ubicacion: @usuario.Ubicacion</label>
-					<br>
-					<label>Intereses: @usuario.Intereses</label>
 
 
 					<br>

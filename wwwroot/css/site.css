@@ -10,7 +10,7 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: midnightblue;
+    color: rgb(3, 243, 252);
 }
 
 a{
@@ -178,11 +178,10 @@ a{
 .la314 {
     width: 100%;
     padding: 80px 20px;
-    background-image: linear-gradient(180deg, rgba(6, 232, 248, 0.6) 0%, #080808eb 60%);
-   
+    background-image: linear-gradient(180deg, rgba(6, 248, 248, 0.6) 0%, #080808eb 60%);
     border-radius: 20px;
 
-    border: none;
+    border: 1px solid #03fbfb;
     font-size: 14px;
     font-weight: 600;
     color: white;
@@ -258,8 +257,7 @@ body {
 
 nav {
     border: 1px solid #09121cd9;
-    background-image: linear-gradient(#46a2fdbf 0%, #46a2fd77 60%);
-
+    background-color: rgba(0, 0, 0, .5);
 }
 
 #navbarNav .navbar-nav a {
