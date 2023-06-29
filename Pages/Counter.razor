@@ -1,4 +1,169 @@
 ﻿@page "/counter"
-
+@using Dimidiun.Data.Request;
+@using Dimidiun.Data.Response;
 <PageTitle>Pagina #1</PageTitle>
 
+
+
+
+
+
+
+@foreach (var usuario in Usuarios)
+{
+	
+
+
+ <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="" alt="">
+                    <button type="button" class="boton-avatar">
+                        <i class="oi oi-image"></i>
+                    </button>
+                </div>
+                <button type="button" class="boton-portada">
+                    <i class="oi oi-image"></i> Cambiar fondo
+                </button>
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo"> @usuario.Nombre @usuario.Apellido</h3>
+                <p class="texto">Informacion</p>
+            </div>
+	</div>
+            <div class="perfil-usuario-footer">
+                <ul class="lista-datos">
+                    <li><i class="icono fas fa-map-signs"></i> Direccion de usuario: @usuario.Ubicacion</li>
+                    <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
+                    <li><i class="icono fas fa-briefcase"></i> Trabaja en.</li>
+                    <li><i class="icono fas fa-building"></i> Cargo</li>
+                </ul>
+                <ul class="lista-datos">
+                    <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
+                    <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento.</li>
+                    <li><i class="icono fas fa-user-check"></i> Registro.</li>
+                    <li><i class="icono fas fa-share-alt"></i> Redes sociales.</li>
+                </ul>
+            </div>
+    </section>
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+   
+
+
+                    @code{
+
+
+	public string TituloForm => request.IdUsuario == 0 ?
+		"Agregar Usuario" : "Modificar Usuario";
+
+	public bool ShowForm { get; set; } = false;
+
+
+	public string Filtro { get; set; } = "";
+
+	public List<UsuarioResponse> Usuarios { get; set; } = new List<UsuarioResponse>();
+
+
+
+	public UsuarioRequest request { get; set; } = new UsuarioRequest();
+
+
+
+	void Cancelar()
+	{
+		request  = new UsuarioRequest();
+		ShowForm = false;
+	}
+
+
+
+
+	async Task CargarUsuarios()
+	{
+		var resultado = await UsuarioServices.Consultar(Filtro);
+
+		if (resultado.Success)
+		{
+			Usuarios = resultado.Data!;
+
+		}
+
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		await CargarUsuarios();
+	}
+
+
+
+
+	public async Task Send()
+	{
+		if (request.IdUsuario == 0)
+		{
+			//Debo registrar el contacto..
+			var r = await UsuarioServices.Crear(request);
+			if (r.Success)
+			{
+				Cancelar();
+				await CargarUsuarios();
+				StateHasChanged();
+			}
+		}
+		else
+		{
+			//Debo solicitar modificar el contacto...
+			var r = await UsuarioServices.Modificar(request);
+			if (r.Success)
+			{
+				Cancelar();
+				await CargarUsuarios();
+				StateHasChanged();
+			}
+		}
+	}
+
+
+
+
+
+	public void Seleccionar(int IdUsuario)
+	{
+		ShowForm = true;
+		request = Usuarios
+		.Where(c => c.IdUsuario == IdUsuario)
+		.Select(c => c.ToRequest())
+		.FirstOrDefault()??new UsuarioRequest();
+	}
+
+
+
+	public async Task Eliminar(UsuarioResponse contacto)
+	{
+		var resultado = await UsuarioServices.Eliminar(contacto.ToRequest());
+		if (resultado.Success)
+		{
+			await CargarUsuarios();
+			StateHasChanged();
+		}
+	}
+
+
+                    }

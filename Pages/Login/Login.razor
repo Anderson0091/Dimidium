@@ -1,5 +1,8 @@
 @page "/login"
+@using Dimidiun.Data.Request;
+@using Dimidiun.Data.Response;
 @using Microsoft.AspNetCore.Components.Web
+
 
 <PageTitle>Index</PageTitle>
 
@@ -7,8 +10,6 @@
 
 @if (!ShowForm)
 {
-	<body>
-		<main>
 			<div class="la314">
 				<h2 class="">Iniciar Sesión</h2>
 				<input type="text" placeholder="Correo Electronico">
@@ -19,27 +20,26 @@
 				<button type="submit" class="btn btn-outline-success">Iniciar Sesión</button>
 				<br>
 				<br>
-				<button class="btn btn-secondary"
+				
+			</div>
+	
+	<button class="btn btn-secondary"
 				@onclick="()=>{ShowForm = !ShowForm;}">
 					Registrar
 				</button>
-			</div>
-		</main>
-
-	</body>
-	 <div class="la314">
-		<h2>Usuarios (@Usuarios.Count)</h2>
-		<div class="mb-2">
 			
-		</div>
-	</div>
+
 }
-<div class="la314">
+
 	@if (ShowForm)
 	{
-		<h3>@TituloForm</h3>
+	
 		<EditForm Model="request" OnValidSubmit="Send">
-<div class="La314">
+<div class="la314">
+
+			<h3>@TituloForm</h3>
+
+
 			<div class="mb-3 input-group ">
 				<label class="input-group-text">Nombre</label>
 				<InputText class="form-control" @bind-Value="@request.Nombre"></InputText>
@@ -71,8 +71,8 @@
 			<div class="mb-3 input-group">
 				<label class="input-group-text">Genero</label>
 				<select class="form-control" @bind="request.Genero">
-					<option>M</option>
-					<option>F</option>
+						<option> Chico  </option>
+					<option>Chica</option>
 				</select>
 			</div>
 			<div class="mb-3 input-group">
@@ -80,9 +80,10 @@
 				<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
 			</div>
 
-			<div class="mb-3 input-group">
+			<div class="mb-3 input-group ">
 				<label class="input-group-text">Foto</label>
-				<InputFile class="form-control" OnChange="CargarFoto" @bind-Value="@request.FotoPerfil"></InputFile>
+				<InputText class="form-control"  @bind-Value="@request.FotoPerfil">
+				</InputText>
 			</div>
 			<div class="mb-3 input-group">
 				<label class="input-group-text">Intereses</label>
@@ -94,7 +95,7 @@
 
 
 			<div class="btn-group">
-				<button type="submit" class="btn btn-outline-success">Guardar</button>
+				<button type="submit" @onclick="GuardarUsuario" class="btn btn-outline-success">Guardar</button>
 				<button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
 			</div>
 			</div>
@@ -107,13 +108,15 @@
 		<div Class="container">
 			@foreach (var usuario in Usuarios)
 			{
+		
+
 
 			}
 
 		</div>
 	}
 
-</div>
+
 
 
 @code {
@@ -162,32 +165,45 @@
 
 
 
+	@inject IJSRuntime JSRuntime
 
-	public async Task Send()
+
+
+public async Task Send()
 	{
-		if (request.IdUsuario == 0)
+		try
 		{
-			//Debo registrar el contacto..
-			var r = await UsuarioServices.Crear(request);
-			if (r.Success)
+			if (request.IdUsuario == 0)
 			{
-				Cancelar();
-				await CargarUsuarios();
-				StateHasChanged();
+				// Debo registrar el usuario...
+				var resultado = await UsuarioServices.Crear(request);
+				if (resultado.Success)
+				{
+					Cancelar();
+					await CargarUsuarios();
+					StateHasChanged();
+				}
+			}
+			else
+			{
+				// Debo modificar el usuario...
+				var resultado = await UsuarioServices.Modificar(request);
+				if (resultado.Success)
+				{
+					Cancelar();
+					await CargarUsuarios();
+					StateHasChanged();
+				}
 			}
 		}
-		else
+		catch (Exception ex)
 		{
-			//Debo solicitar modificar el contacto...
-			var r = await UsuarioServices.Modificar(request);
-			if (r.Success)
-			{
-				Cancelar();
-				await CargarUsuarios();
-				StateHasChanged();
-			}
+			// Mostrar una alerta en caso de error
+			await JSRuntime.InvokeVoidAsync("alert", "Error al guardar los datos en la base de datos: " + ex.Message);
 		}
 	}
+
+
 
 
 
@@ -212,20 +228,28 @@
 		}
 	}
 
-	private IBrowserFile fotoSeleccionada;
-
-
-	private async Task CargarFoto(InputFileChangeEventArgs e)
+	public async Task GuardarUsuario()
 	{
-		fotoSeleccionada = e.File;
-
-		using (var stream = fotoSeleccionada.OpenReadStream())
+		if (request.IdUsuario == 0)
 		{
-			using (var memoryStream = new MemoryStream())
+			// Debo registrar el usuario...
+			var resultado = await UsuarioServices.Crear(request);
+			if (resultado.Success)
 			{
-				await stream.CopyToAsync(memoryStream);
-				var bytes = memoryStream.ToArray();
-				request.FotoPerfil = Convert.ToBase64String(bytes);
+				Cancelar();
+				await CargarUsuarios();
+				StateHasChanged();
+			}
+		}
+		else
+		{
+			// Debo modificar el usuario...
+			var resultado = await UsuarioServices.Modificar(request);
+			if (resultado.Success)
+			{
+				Cancelar();
+				await CargarUsuarios();
+				StateHasChanged();
 			}
 		}
 	}

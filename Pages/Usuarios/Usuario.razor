@@ -2,107 +2,77 @@
 
 
 
-
-
-
-
-
-
-
-
-<div class="la314">
 @if (!ShowForm)
-				@foreach (var usuario in Usuarios)
-				{				
-							<div class="la314">
-										<label class="card-title">ID: @usuario.IdUsuario</label>
-										<img src="@usuario.FotoPerfil" alt="Foto de perfil"  class="profile-image" />
-												<br>
-										<label>Nombre: @usuario.Nombre</label>
-										<label>@usuario.Apellido</label>
-										<br>
-										<label>Edad: @usuario.Edad</label> 
-										<br>
-										<label>Sexo: @usuario.Genero</label>
-										<br>
-										<label>Tel: @usuario.Telefono</label>
-										<br>
-										<label> Ubicacion: @usuario.Ubicacion</label>
-										<br>
-										<label>Intereses: @usuario.Intereses</label>
-
-
-					<br>		
-						<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
-						<button @onclick="()=>Eliminar(usuario)" class="btn btn-danger">Eliminar</button>
-						<button class="btn btn-secondary" @onclick="()=>{ShowForm = !ShowForm;}">Registrar</button>
-						</div>
-						
-			<h2>Usuarios (@Usuarios.Count)</h2>
-		
-		
-		
-						
-				}
-</div>
-
-}
-	<div class="container">
-@if (ShowForm)
 {
-<h3>@TituloForm</h3>
-<EditForm Model="request" OnValidSubmit="Send">
+	 <div class="la314">
+		<h2>Usuarios (@Usuarios.Count)</h2>
+		<div class="mb-2">
+			<button class="btn btn-secondary"
+				@onclick="()=>{ShowForm = !ShowForm;}">
+				Registrar
+			</button>
+		</div>
+	</div>
+}
+<div class="container">
+	@if (ShowForm)
+	{
+		<h3>@TituloForm</h3>
+		<EditForm Model="request" OnValidSubmit="Send">
 
-			  <div class="mb-3 input-group"> 
-					<label class="input-group-text">Nombre</label>
-					<InputText class="form-control" @bind-Value="@request.Nombre"></InputText>
-				</div>
-					 <div class="mb-3 input-group">
-					<label class="input-group-text">Apellido</label>
-					<InputText class="form-control" @bind-Value="@request.Apellido"></InputText>
-				</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Nombre</label>
+				<InputText class="form-control" @bind-Value="@request.Nombre"></InputText>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Apellido</label>
+				<InputText class="form-control" @bind-Value="@request.Apellido"></InputText>
+			</div>
 
-				<div class="mb-3 input-group">
-					<label class="input-group-text">Contraseña</label>
-					<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
-				</div>
-				<div class="mb-3 input-group">
-					<label class="input-group-text">Telefono</label>
-					<InputText class="form-control" @bind-Value="@request.Telefono"></InputText>
-				</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Contraseña</label>
+				<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Telefono</label>
+				<InputText class="form-control" @bind-Value="@request.Telefono"></InputText>
+			</div>
 
-				<div class="mb-3 input-group">
-					<label class="input-group-text">Edad</label>
-					<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
-				</div>
-				<div class="mb-3 input-group">
-					<label class="input-group-text">Email</label>
-					<InputText class="form-control" @bind-Value="@request.Email"></InputText>
-				</div>
-
-
-				<div class="mb-3 input-group">
-					  <label class="input-group-text">Genero</label>
-					<select class="form-control" @bind="request.Genero">
-						<option >M</option>
-					<option >F</option>
-					</select>
-				</div>
-				<div class="mb-3 input-group">
-					<label class="input-group-text">Ubicacion</label>
-					<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
-				</div>
-
-				<div class="mb-3 input-group">
-					<label class="input-group-text">Foto</label>
-					<InputFile class="form-control" OnChange="CargarFoto" @bind-Value="@request.FotoPerfil"></InputFile>
-				</div>
-				<div class="mb-3 input-group">
-					<label class="input-group-text">Intereses</label>
-					<InputText class="form-control" @bind-Value="@request.Intereses"></InputText>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Edad</label>
+				<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Email</label>
+				<InputText class="form-control" @bind-Value="@request.Email"></InputText>
+			</div>
 
 
-				</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Genero</label>
+				<select class="form-control" @bind="request.Genero">
+					<option>M</option>
+					<option>F</option>
+				</select>
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Ubicacion</label>
+				<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
+			</div>
+
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Foto</label>
+				<InputText class="form-control" @bind-Value="@request.FotoPerfil"></InputText>
+
+			</div>
+			<div class="mb-3 input-group">
+				<label class="input-group-text">Intereses</label>
+				<InputText class="form-control" @bind-Value="@request.Intereses"></InputText>
+
+
+			</div>
+
+
 
 
 
@@ -111,15 +81,53 @@
 				<button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
 			</div>
 
-				</EditForm>
-				}
+		</EditForm>
+	}
+
+	else
+	{
+
+		<div Class="container">
+			@foreach (var usuario in Usuarios)
+			{
+
+
+				<div class="la314">
+					<label class="card-title">ID: @usuario.IdUsuario</label>
+					<img src="@usuario.FotoPerfil" alt="Foto de perfil" class="profile-image" />
+					<br>
+					<label>Nombre: @usuario.Nombre</label>
+					<label>@usuario.Apellido</label>
+					<br>
+					<label>Edad: @usuario.Edad</label>
+					<br>
+					<label>Sexo: @usuario.Genero</label>
+					<br>
+					<label>Tel: @usuario.Telefono</label>
+					<br>
+					<label> Ubicacion: @usuario.Ubicacion</label>
+					<br>
+					<label>Intereses: @usuario.Intereses</label>
+
+
+					<br>
+					<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
+					<button @onclick="()=>Eliminar(usuario)" class="btn btn-danger">Eliminar</button>
+
+				</div>
+
+
+
+
+			}
+
+		</div>
+	}
+
 </div>
-	
-    
 
 
-
-@code{
+@code {
 
 	public string TituloForm => request.IdUsuario == 0 ?
 		"Agregar Usuario" : "Modificar Usuario";
@@ -191,6 +199,8 @@
 			}
 		}
 	}
+	
+
 
 
 
@@ -215,23 +225,7 @@
 		}
 	}
 
-	private IBrowserFile fotoSeleccionada;
 
-		
-	private async Task CargarFoto(InputFileChangeEventArgs e)
-	{
-		fotoSeleccionada = e.File;
-
-		using (var stream = fotoSeleccionada.OpenReadStream())
-		{
-			using (var memoryStream = new MemoryStream())
-			{
-				await stream.CopyToAsync(memoryStream);
-				var bytes = memoryStream.ToArray();
-				request.FotoPerfil = Convert.ToBase64String(bytes);
-			}
-		}
-	}
 
 
 
