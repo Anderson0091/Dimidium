@@ -19,7 +19,7 @@
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-					<img src="C:\Users\Alan Y Alexa\Downloads\Mi proyecto" alt="img"/>
+					<img src="@usuario.FotoPerfil" alt="Foto de perfil" class="profile-image" />
 					<input type="file" id="archivo-input" style="display: none;">
 					<button type="button" class="boton-avatar" onclick="document.getElementById('archivo-input').click();">
 						<i class="oi oi-image"></i>
@@ -36,7 +36,6 @@
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
                 <h3 class="titulo"> @usuario.Nombre @usuario.Edad</h3>
-                <p class="texto">Informacion</p>
             </div>
 	</div>
             <div class="perfil-usuario-footer">
