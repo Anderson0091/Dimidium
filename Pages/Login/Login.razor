@@ -11,7 +11,9 @@
 @if (!ShowForm)
 {
 			<div class="la314">
-				<h2 class="">Iniciar Sesión</h2>
+		<center><h2>Iniciar Sesión</h2></center>
+				<br>
+				<br>
 				<input type="text" placeholder="Correo Electronico">
 				<br>
 				<br>
@@ -34,10 +36,10 @@
 	@if (ShowForm)
 	{
 	
-		<EditForm Model="request" OnValidSubmit="Send">
-<div class="la314">
+		<EditForm Model="request" OnValidSubmit="Send"><div class="la314">
 
-			<h3>@TituloForm</h3>
+			<h3><center>@TituloForm</center></h3>
+			<br>
 
 
 			<div class="mb-3 input-group ">
@@ -111,9 +113,10 @@
 
 
 @code {
+	
 
 	public string TituloForm => request.IdUsuario == 0 ?
-		"Agregar Usuario" : "Modificar Usuario";
+				"Registro" : "Modificar Usuario"; 
 
 	public bool ShowForm { get; set; } = false;
 
