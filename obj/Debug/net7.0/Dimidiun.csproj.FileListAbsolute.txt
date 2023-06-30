@@ -506,3 +506,4 @@ C:\Prog. IV\GDimidium\obj\Debug\net7.0\refint\Dimidiun.dll
 C:\Prog. IV\GDimidium\obj\Debug\net7.0\Dimidiun.pdb
 C:\Prog. IV\GDimidium\obj\Debug\net7.0\Dimidiun.genruntimeconfig.cache
 C:\Prog. IV\GDimidium\obj\Debug\net7.0\ref\Dimidiun.dll
+C:\Prog. IV\GDimidium\bin\Debug\net7.0\libman.json

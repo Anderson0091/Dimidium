@@ -9,6 +9,7 @@
 
 
 
+
 @foreach (var usuario in Usuarios)
 {
 	
@@ -18,10 +19,14 @@
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-                    <img src="" alt="">
-                    <button type="button" class="boton-avatar">
-                        <i class="oi oi-image"></i>
-                    </button>
+					<img src="C:\Users\Alan Y Alexa\Downloads\Mi proyecto" alt="img"/>
+					<input type="file" id="archivo-input" style="display: none;">
+					<button type="button" class="boton-avatar" onclick="document.getElementById('archivo-input').click();">
+						<i class="oi oi-image"></i>
+					</button>
+
+					<div id="contenedor-imagen"></div>
+					
                 </div>
                 <button type="button" class="boton-portada">
                     <i class="oi oi-image"></i> Cambiar fondo
