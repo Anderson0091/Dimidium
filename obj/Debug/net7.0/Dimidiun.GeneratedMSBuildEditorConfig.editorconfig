@@ -9,69 +9,69 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Dimidiun
 build_property.RootNamespace = Dimidiun
-build_property.ProjectDir = C:\Users\andy\source\repos\D22\
+build_property.ProjectDir = C:\Prog. IV\FDimidium\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\andy\source\repos\D22
+build_property.MSBuildProjectDirectory = C:\Prog. IV\FDimidium
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/andy/source/repos/D22/App.razor]
+[C:/Prog. IV/FDimidium/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/Counter.razor]
+[C:/Prog. IV/FDimidium/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/FetchData.razor]
+[C:/Prog. IV/FDimidium/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/Index.razor]
+[C:/Prog. IV/FDimidium/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/Login/Login.razor]
+[C:/Prog. IV/FDimidium/Pages/Login/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/Login/Registro.razor]
+[C:/Prog. IV/FDimidium/Pages/Login/Registro.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cUmVnaXN0cm8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/Login/_Imports.razor]
+[C:/Prog. IV/FDimidium/Pages/Login/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cX0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/Usuarios/Usuario.razor]
+[C:/Prog. IV/FDimidium/Pages/Usuarios/Usuario.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcVXN1YXJpby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/Usuarios/_Imports.razor]
+[C:/Prog. IV/FDimidium/Pages/Usuarios/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcX0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Shared/SurveyPrompt.razor]
+[C:/Prog. IV/FDimidium/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/_Imports.razor]
+[C:/Prog. IV/FDimidium/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Shared/MainLayout.razor]
+[C:/Prog. IV/FDimidium/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-qt2pb20y4r
 
-[C:/Users/andy/source/repos/D22/Shared/NavMenu.razor]
+[C:/Prog. IV/FDimidium/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-2rksohbzag
 
-[C:/Users/andy/source/repos/D22/Pages/Error.cshtml]
+[C:/Prog. IV/FDimidium/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andy/source/repos/D22/Pages/_Host.cshtml]
+[C:/Prog. IV/FDimidium/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
