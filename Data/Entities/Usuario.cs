@@ -8,11 +8,18 @@ namespace Dimidiun.Data.Entities
     {
         [Key]
         public int IdUsuario { get; set; }
+        [Required(ErrorMessage = "El campo Nombre es obligatorio.")]
         public string Nombre { get; set; } = "";
+
         public string? Apellido { get; set; }
+
         public int Edad { get; set; }
+        [Required(ErrorMessage = "El campo Edad es obligatorio.")]
         public string Telefono { get; set; }
+        [Required(ErrorMessage = "El campo Telefono es obligatorio.")]
         public string? Email { get; set; }
+
+        [Required(ErrorMessage = "El campo Contraseña es obligatorio.")]
         public string Contraseña { get; set; }
         public string? Genero { get; set; }
         public string? Ubicacion { get; set; }

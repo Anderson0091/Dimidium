@@ -1,70 +1,7 @@
-﻿@page "/Usuario"
+﻿@page "/LIKE"
 
 
 
-@if (!ShowForm)
-{
-	 <div class="la314">
-		<h2>Usuarios (@Usuarios.Count)</h2>
-		<div class="mb-2">
-			<button class="btn btn-secondary"
-				@onclick="()=>{ShowForm = !ShowForm;}">
-				Registrar
-			</button>
-		</div>
-	</div>
-}
-<div class="container">
-	@if (ShowForm)
-	{
-		<h3>@TituloForm</h3>
-		<EditForm Model="request" OnValidSubmit="Send">
-
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Nombre</label>
-				<InputText class="form-control" @bind-Value="@request.Nombre"></InputText>
-			</div>
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Apellido</label>
-				<InputText class="form-control" @bind-Value="@request.Apellido"></InputText>
-			</div>
-
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Telefono</label>
-				<InputText class="form-control" @bind-Value="@request.Telefono"></InputText>
-			</div>
-
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Edad</label>
-				<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
-			</div>
-
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Ubicacion</label>
-				<InputText class="form-control" @bind-Value="@request.Ubicacion"></InputText>
-			</div>
-
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Email</label>
-				<InputText class="form-control" @bind-Value="@request.Email"></InputText>
-			</div>
-
-			<div class="mb-3 input-group">
-				<label class="input-group-text">Contraseña</label>
-				<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
-			</div>
-			<br>
-
-			<div class="btn-group">
-				<button type="submit" class="btn btn-outline-success">Guardar</button>
-				<button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
-			</div>
-
-		</EditForm>
-	}
-
-	else
-	{
 
 		<div Class="container">
 			@foreach (var usuario in Usuarios)
@@ -84,12 +21,7 @@
 					<br>
 					<label>Tel: @usuario.Telefono</label>
 					<br>
-					<label> Ubicacion: @usuario.Ubicacion</label>
-
-
-					<br>
-					<button @onclick="()=>Seleccionar(usuario.IdUsuario)" class="btn btn-warning">Editar</button>
-					<button @onclick="()=>Eliminar(usuario)" class="btn btn-danger">Eliminar</button>
+					<label> Ubicacion: @usuario.Ubicacion</label>	
 
 				</div>
 
@@ -99,9 +31,7 @@
 			}
 
 		</div>
-	}
 
-</div>
 
 
 @code {

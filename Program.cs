@@ -29,8 +29,17 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapBlazorHub();
+    endpoints.MapFallbackToPage("/_Host");
+    endpoints.MapHub<BlazorChatSampleHub>(BlazorChatSampleHub.HubUrl);
+});
 
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
+
+
+
+//app.MapBlazorHub();
+//app.MapFallbackToPage("/_Host");
 
 app.Run();

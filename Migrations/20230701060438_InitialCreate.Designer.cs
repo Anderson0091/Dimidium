@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dimidiun.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20230530154528_InitialCreate")]
+    [Migration("20230701060438_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -105,19 +105,20 @@ namespace Dimidiun.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdPerfil"));
 
                     b.Property<string>("Descripcion")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gustos")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdUsuario")
                         .HasColumnType("int");
 
+                    b.Property<int>("UsuarioIdUsuario")
+                        .HasColumnType("int");
+
                     b.HasKey("IdPerfil");
 
-                    b.HasIndex("IdUsuario");
+                    b.HasIndex("UsuarioIdUsuario");
 
                     b.ToTable("Perfiles");
                 });
@@ -131,7 +132,6 @@ namespace Dimidiun.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdUsuario"));
 
                     b.Property<string>("Apellido")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Contraseña")
@@ -146,15 +146,12 @@ namespace Dimidiun.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FotoPerfil")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Genero")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Intereses")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
@@ -166,7 +163,6 @@ namespace Dimidiun.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ubicacion")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdUsuario");
@@ -212,7 +208,7 @@ namespace Dimidiun.Migrations
                 {
                     b.HasOne("Dimidiun.Data.Entities.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("IdUsuario")
+                        .HasForeignKey("UsuarioIdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

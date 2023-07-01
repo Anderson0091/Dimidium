@@ -23,11 +23,11 @@
 				<button type="submit" class="btn btn-outline-success">Iniciar Sesión</button>
 				<br>
 				<br>
-				
-				<button class="btn btn-secondary" @onclick="()=>{ShowForm = !ShowForm;}">Registrar</button>
+
+		<button class="btn btn-secondary" @onclick="()=>{ShowForm = !ShowForm;}">Registrar</button>
 				
 			</div>
-	
+
 	
 			
 
@@ -37,7 +37,7 @@
 	{
 	
 		<EditForm Model="request" OnValidSubmit="Send"><div class="la314">
-
+			 <ValidationSummary />
 			<h3><center>@TituloForm</center></h3>
 			<br>
 
@@ -45,15 +45,18 @@
 			<div class="mb-3 input-group ">
 				<label class="input-group-text">Nombre</label>
 				<InputText class="form-control" @bind-Value="@request.Nombre"></InputText>
+				 <ValidationMessage For="@(() => request.Nombre)" />
 			</div>
 			<div class="mb-3 input-group">
 				<label class="input-group-text">Apellido</label>
 				<InputText class="form-control" @bind-Value="@request.Apellido"></InputText>
+
 			</div>
 
 			<div class="mb-3 input-group">
 				<label class="input-group-text">Edad</label>
 				<InputNumber class="form-control" @bind-Value="@request.Edad"></InputNumber>
+				<ValidationMessage For="@(() => request.Edad)" />
 			</div>
 
 			<div class="mb-3 input-group">
@@ -86,9 +89,13 @@
 				<InputText class="form-control" @bind-Value="@request.Contraseña"></InputText>
 			</div>
 
+	<div class="mb-3 input-group">
+				<label class="input-group-text">Contraseña</label>
+				<InputText class="form-control" @bind-Value="@request.FotoPerfil"></InputText>
+			</div>
 
 			<div class="btn-group">
-				<button type="submit" @onclick="GuardarUsuario" class="btn btn-outline-success">Guardar</button>
+				<button type="submit"  class="btn btn-outline-success">Guardar</button>
 				<button @onclick="Cancelar" class="btn btn-outline-danger">Cancelar</button>
 			</div>
 			</div>
@@ -198,9 +205,6 @@ public async Task Send()
 	}
 
 
-
-
-
 	public void Seleccionar(int IdUsuario)
 	{
 		ShowForm = true;
@@ -222,32 +226,7 @@ public async Task Send()
 		}
 	}
 
-	public async Task GuardarUsuario()
-	{
-		if (request.IdUsuario == 0)
-		{
-			// Debo registrar el usuario...
-			var resultado = await UsuarioServices.Crear(request);
-			if (resultado.Success)
-			{
-				Cancelar();
-				await CargarUsuarios();
-				StateHasChanged();
-			}
-		}
-		else
-		{
-			// Debo modificar el usuario...
-			var resultado = await UsuarioServices.Modificar(request);
-			if (resultado.Success)
-			{
-				Cancelar();
-				await CargarUsuarios();
-				StateHasChanged();
-			}
-		}
-	}
-
+	
 
 
 }
