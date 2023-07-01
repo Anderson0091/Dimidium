@@ -765,3 +765,7 @@ C:\Users\andy\source\repos\D22\obj\Debug\net7.0\ref\Dimidiun.dll
 C:\Users\andy\source\repos\D22\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Client.dll
 C:\Users\andy\source\repos\D22\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.dll
 C:\Users\andy\source\repos\D22\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\andy\source\repos\D22\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\andy\source\repos\D22\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\andy\source\repos\D22\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\andy\source\repos\D22\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

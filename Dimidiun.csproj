@@ -8,12 +8,17 @@
 
   <ItemGroup>
     <Compile Remove="Scripts\**" />
+    <Compile Remove="wwwroot\Imagenes\Usuarios\**" />
     <Content Remove="Scripts\**" />
+    <Content Remove="wwwroot\Imagenes\Usuarios\**" />
     <EmbeddedResource Remove="Scripts\**" />
+    <EmbeddedResource Remove="wwwroot\Imagenes\Usuarios\**" />
     <None Remove="Scripts\**" />
+    <None Remove="wwwroot\Imagenes\Usuarios\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
@@ -26,10 +31,6 @@
 
   <ItemGroup>
     <None Include="wwwroot\Imagenes\7.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\Imagenes\Usuarios\" />
   </ItemGroup>
 
 </Project>

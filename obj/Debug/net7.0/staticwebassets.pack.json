@@ -9,6 +9,22 @@
       "PackagePath": "staticwebassets\\Imagenes\\7.jpg"
     },
     {
+      "Id": "C:\\Users\\andy\\source\\repos\\D22\\wwwroot\\Imagenes\\8.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andy\\source\\repos\\D22\\wwwroot\\Imagenes\\F.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\F.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andy\\source\\repos\\D22\\wwwroot\\Imagenes\\M.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\M.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andy\\source\\repos\\D22\\wwwroot\\Imagenes\\YinYan.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\YinYan.jpg"
+    },
+    {
       "Id": "C:\\Users\\andy\\source\\repos\\D22\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },

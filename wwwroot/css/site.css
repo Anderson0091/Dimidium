@@ -367,8 +367,8 @@ body {
         align-items: center;
         justify-content: center;
         border: 7px solid #080808;
-        background-color: #DFE5F2;
-        border-radius: 50%;
+        background-color: #ffffff;
+        border-radius: 100%;
         box-shadow: 0 0 12px rgba(0, 0, 0, .2);
         position: absolute;
         bottom: -40px;
@@ -379,7 +379,7 @@ body {
         .seccion-perfil-usuario .perfil-usuario-avatar img {
             width: 100%;
             position: relative;
-            border-radius: 50%;
+            border-radius: 100%;
         }
 
         .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
@@ -391,7 +391,7 @@ body {
             box-shadow: 0 0 12px rgba(0, 0, 0, .2);
             width: 45px;
             height: 45px;
-            border-radius: 50%;
+            border-radius: 1000%;
             cursor: pointer;
         }
 

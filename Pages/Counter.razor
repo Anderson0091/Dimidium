@@ -10,16 +10,15 @@
 
 
 
-@foreach (var usuario in Usuarios)
-{
-	
-
 
  <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
                 <div class="perfil-usuario-avatar">
-					<img src="@usuario.FotoPerfil" alt="Foto de perfil" class="profile-image" />
+				
+							<img src="/Imagenes/M.jpg" alt="Foto de perfil" class="profile-image" />
+					
+				
 					<input type="file" id="archivo-input" style="display: none;">
 					<button type="button" class="boton-avatar" onclick="document.getElementById('archivo-input').click();">
 						<i class="oi oi-image"></i>
@@ -39,21 +38,22 @@
         </div>
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
-                <h3 class="titulo"> @usuario.Nombre @usuario.Edad</h3>
+                <h3 class="titulo"> Mario Hugo</h3>
             </div>
 	</div>
             <div class="perfil-usuario-footer">
-                <ul class="lista-datos">
-				<li><i class="oi oi-person"></i> Genero: @usuario.Genero</li>
-					<li><i class="oi oi-location"></i> Ubicacion: @usuario.Ubicacion</li>
-                    <li><i class="oi oi-book"></i> Intereses: @usuario.Intereses</li>
+		<ul class="lista-datos">
+<li><i class="oi oi-person"></i> Edad: 25 años</li>
+				<li><i class="oi oi-person"></i> Genero: M</li>
+					<li><i class="oi oi-location"></i> Ubicacion: San Juan,RD</li>
+                    <li><i class="oi oi-book"></i> Intereses: Jugar videojuegos</li>
                 </ul>
             </div>
     </section>
 
 
 
-}
+
 
 
 
@@ -66,7 +66,7 @@
    
 
 
-                    @code{
+@code{
 
 
 	public string TituloForm => request.IdUsuario == 0 ?

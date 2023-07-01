@@ -7,7 +7,7 @@
 
 
 <body class="la314">
-    <h1>Blazor SignalR Chat Sample</h1>
+    <h1>Didium Chat </h1>
     <hr />
 
     @if (!_isChatting)
@@ -52,7 +52,7 @@
             }
             <hr />
             <textarea class="input-lg" placeholder="enter your comment" @bind="@_newMessage"></textarea>
-            <button class="btn btn-default" @onclick="@(() => SendAsync(_newMessage))">Send</button>
+            <button class=" oi oi-share btn-btn-primary" @onclick="@(() => SendAsync(_newMessage))">Send</button>
         </div>
     }
     
